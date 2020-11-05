@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailViewController" customModule="MovieAppRedux" customModuleProvider="target">
+            <connections>
+                <outlet property="detailView" destination="i5M-Pr-FkT" id="W6F-MC-v3g"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="MovieDetailView" customModule="MovieAppRedux" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bvz-5B-Bpg">
+                    <rect key="frame" x="15" y="59" width="384" height="634"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FC8-Zw-6Qt">
+                    <rect key="frame" x="15" y="713" width="384" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tih-Vx-wc4">
+                    <rect key="frame" x="15" y="772" width="384" height="55"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="P3b-x2-uL2"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <state key="normal" title="DONE">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="doneBtnAction:" destination="-1" eventType="touchUpInside" id="Lf7-dz-pYc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0039215686269999999" green="0.20784313730000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="FC8-Zw-6Qt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="38Z-Rv-uhv"/>
+                <constraint firstItem="tih-Vx-wc4" firstAttribute="top" secondItem="FC8-Zw-6Qt" secondAttribute="bottom" constant="35" id="6p5-JP-gmp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bvz-5B-Bpg" secondAttribute="trailing" constant="15" id="8cI-Ku-Rt5"/>
+                <constraint firstItem="tih-Vx-wc4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="IPu-ou-94E"/>
+                <constraint firstItem="Bvz-5B-Bpg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="PyH-A7-IJe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tih-Vx-wc4" secondAttribute="bottom" constant="35" id="eQl-yW-JC5"/>
+                <constraint firstItem="FC8-Zw-6Qt" firstAttribute="top" secondItem="Bvz-5B-Bpg" secondAttribute="bottom" constant="20" id="lgF-ac-tpx"/>
+                <constraint firstItem="Bvz-5B-Bpg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="owh-jA-lQf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FC8-Zw-6Qt" secondAttribute="trailing" constant="15" id="r4f-Wn-GwJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tih-Vx-wc4" secondAttribute="trailing" constant="15" id="rug-mC-Owz"/>
+            </constraints>
+            <connections>
+                <outlet property="donBtnOutlet" destination="tih-Vx-wc4" id="HsH-V2-fHI"/>
+                <outlet property="poster" destination="Bvz-5B-Bpg" id="Lox-be-cyA"/>
+                <outlet property="title" destination="FC8-Zw-6Qt" id="AUK-jN-FE1"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="72.991071428571431"/>
+        </view>
+    </objects>
+</document>

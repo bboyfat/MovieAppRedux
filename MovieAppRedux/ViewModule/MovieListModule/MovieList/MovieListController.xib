@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieListController" customModule="MovieAppRedux" customModuleProvider="target">
+            <connections>
+                <outlet property="movieListView" destination="i5M-Pr-FkT" id="Tr6-nJ-d8W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="MovieListView" customModule="MovieAppRedux" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o8G-H5-K5Y">
+                    <rect key="frame" x="0.0" y="91" width="414" height="771"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-S9-gF1">
+                    <rect key="frame" x="50" y="54" width="348" height="27"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FAQ-Me-bHN">
+                    <rect key="frame" x="10" y="44" width="35" height="47"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="MCk-vW-r5H"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0039215686269999999" green="0.20784313730000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ozo-S9-gF1" secondAttribute="trailing" constant="16" id="BBu-Y3-akF"/>
+                <constraint firstItem="FAQ-Me-bHN" firstAttribute="centerY" secondItem="ozo-S9-gF1" secondAttribute="centerY" id="CA1-DE-dlj"/>
+                <constraint firstItem="o8G-H5-K5Y" firstAttribute="top" secondItem="ozo-S9-gF1" secondAttribute="bottom" constant="10" id="FlI-BA-inI"/>
+                <constraint firstItem="ozo-S9-gF1" firstAttribute="leading" secondItem="FAQ-Me-bHN" secondAttribute="trailing" constant="5" id="MY3-f3-oKq"/>
+                <constraint firstItem="ozo-S9-gF1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="S7R-WF-Mzi"/>
+                <constraint firstItem="FAQ-Me-bHN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Vb0-Aj-7fr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="o8G-H5-K5Y" secondAttribute="bottom" id="hpO-9u-HM8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="o8G-H5-K5Y" secondAttribute="trailing" id="ii7-PT-Kku"/>
+                <constraint firstItem="o8G-H5-K5Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="opC-nE-Zdj"/>
+                <constraint firstItem="FAQ-Me-bHN" firstAttribute="height" secondItem="ozo-S9-gF1" secondAttribute="height" multiplier="1.8" id="sE8-uv-NDh"/>
+            </constraints>
+            <connections>
+                <outlet property="searchTextField" destination="ozo-S9-gF1" id="Pk1-dS-beB"/>
+                <outlet property="tableView" destination="o8G-H5-K5Y" id="7hW-Cb-Jmq"/>
+            </connections>
+            <point key="canvasLocation" x="111.59420289855073" y="45.535714285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>
