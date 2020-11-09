@@ -10,7 +10,7 @@ Dependencies using in this project:
  - AF - https://github.com/Alamofire/Alamofire
  - HeroTransitions - https://github.com/HeroTransitions/Hero
  
-Servicde for getting movies list:
+Service for getting movies list:
 https://www.omdbapi.com
 
 Used arcticles:
